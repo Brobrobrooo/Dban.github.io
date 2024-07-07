@@ -6,7 +6,7 @@ const ADDED_USERS = ["user1", "user2", "user3"];
 
 let BANNED_USERS = [];
 
-// محاكاة اتصال WebSocket
+//websoket
 let wsConnection = null;
 let isConnected = false;
 
@@ -22,7 +22,7 @@ function login() {
 function sendMessage(message) {
     if (isConnected) {
         logMessage("إرسال رسالة: " + JSON.stringify(message));
-        // محاكاة إرسال الرسالة
+        // login msg
         setTimeout(() => handleResponse({handler: "login_event", type: "success"}), 1000);
     } else {
         logMessage("WebSocket غير متصل");
@@ -117,7 +117,7 @@ function logMessage(message) {
     logElement.scrollTop = logElement.scrollHeight;
 }
 
-// تحميل الإعدادات عند بدء التطبيق
+// app.dban
 window.onload = function() {
     loadBannedUsers();
 };
